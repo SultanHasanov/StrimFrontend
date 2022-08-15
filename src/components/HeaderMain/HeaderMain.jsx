@@ -11,7 +11,7 @@ const HeaderMain = () => {
     <div className={styles.header_main}>
       <div className={styles.container}>
         <div className={styles.name_logo}>
-          <h1>MISTER</h1>
+          <Link to="/"><h1>MISTER</h1></Link>
         </div>
         <div className={styles.buy_settings}>
           <div className={styles.info_buy}>

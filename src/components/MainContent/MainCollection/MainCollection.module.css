@@ -1,0 +1,59 @@
+.main_collection {
+    width: 100%;
+    background-color: rgba(15, 15, 15, 1);
+    color: white;
+    display: flex;
+    font-family: Playfair Display;
+    height: 65vh;
+    flex-wrap: wrap;
+}
+
+.hours_block {
+    width: 55%;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.liniya {
+    width: 40%;
+    height: 0.1rem;
+    margin: 1rem 0rem;
+    background-color: white;
+}
+
+
+.catalog_block {
+    background-image: url("./man.png");
+    background-size: 100%;
+    width: 45%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.catalog_block button {
+    width: 30%;
+    background: none;
+    font-family: Playfair Display;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    border: 0.1rem solid white;
+    height: 3rem;
+}
+
+
+.collection {
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    line-height: 2.5rem;
+    text-align: left;
+}
