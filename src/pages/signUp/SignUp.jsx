@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './SignUp.module.css'
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 
 const SignUp = () => {
@@ -25,6 +26,7 @@ const SignUp = () => {
                 {state ? <AiOutlineEyeInvisible onClick={handleToggle} className={styles.glaz}/> : <AiOutlineEye onClick={handleToggle} className={styles.glaz}/>}
                 </div>
                 <button className={styles.btn}>Зарегистрироваться</button>
+                <div className={styles.text}>Если вы уже зарегистрированы <Link className={styles.regist} to="/auth">Войдите</Link></div>
             </form>
         </div>
     );

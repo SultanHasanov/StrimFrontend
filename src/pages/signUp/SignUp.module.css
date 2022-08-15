@@ -56,3 +56,12 @@ input{
 .password {
     display: flex;
 }
+
+.regist {
+    color: green;
+}
+
+.text {
+    margin-top: 20px;
+    font-weight: bold;
+}
