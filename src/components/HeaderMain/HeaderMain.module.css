@@ -1,0 +1,36 @@
+.header_main {
+    width: 100%;
+    display: flex;
+    background-color: rgba(15, 15, 15, 1);
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+
+.container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.name_logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.buy_settings {
+    width: 50%;
+    align-items: center;
+    display: flex;
+}
+
+
+.info_buy {
+    width: 100%;
+    align-items: center;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
