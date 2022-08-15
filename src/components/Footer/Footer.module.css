@@ -1,0 +1,58 @@
+.footer {
+    width: 100%;
+    background-color: black;
+    background-image: url("./foot.png");
+    background-size: 100%;
+    display: flex;
+    padding: 3rem 0rem;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Playfair Display;
+}
+
+.footer span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    line-height: 1.5rem;
+}
+
+.magazine {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.categories {
+    width: 20%;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.links {
+    width: 20%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_us {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.navigate span {
+    margin: 0rem 0.3rem;
+}
+
+.navigate {
+    margin: 0.3rem 0rem;
+}
