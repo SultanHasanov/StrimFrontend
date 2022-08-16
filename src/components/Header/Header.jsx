@@ -3,8 +3,16 @@ import styles from './Header.module.css'
 import {BsTelephone} from 'react-icons/bs'
 import {VscSignIn} from "react-icons/vsc"
 import { Routes, Route, Link, Navigate, Router } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { signOut } from '../features/userSlice';
+
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const handleOut = () => {
+    dispatch(signOut())
+  }
+
   return (
     <div className={styles.header}>
         <div className={styles.container}>
@@ -16,7 +24,7 @@ const Header = () => {
                 9:00 - 18:00
             </div>
             <div className={styles.auth}>
-                <Link to="/exit"><VscSignIn /></Link>
+                <VscSignIn style={{cursor: 'pointer'}} onClick={handleOut}/>
                 <Link to="/auth">Вход</Link>
                 <Link to="/register">Регистрация</Link>
             </div>
