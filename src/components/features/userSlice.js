@@ -31,10 +31,10 @@ export const postLogin = createAsyncThunk("auth/SignUp", async ({login, password
             return thunkAPI.rejectWithValue(data.error)
         }
         localStorage.setItem("token", data)
-        console.log(data)
-        return data
+        return thunkAPI.fulfillWithValue(data);
     } catch (error) {
         thunkAPI.rejectWithValue(error.message)
+        console.log(error)
     }
 })
 
@@ -53,7 +53,7 @@ const userSlice = createSlice({
         builder
         .addCase(postLogin.fulfilled, (state, action) => {
             state.signingIn = false;
-            state.error = action.payload
+            state.token = action.payload
         })
         .addCase(postLogin.rejected, (state, action) => {
             state.signingIn = false;
