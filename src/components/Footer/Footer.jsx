@@ -9,7 +9,7 @@ const Footer = () => {
     <div className={styles.footer}>
         <div className={styles.magazine}>
           <span>КОМПАНИЯ</span>
-          <Link to="#">О нас</Link>
+          <Link to="/my-team">О нас</Link>
           <Link to="#">Новости</Link>
           <Link to="#">Работники</Link>
           <Link to="#">Партнерство</Link>
