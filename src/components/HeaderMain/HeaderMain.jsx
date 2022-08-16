@@ -3,12 +3,14 @@ import styles from "./HeaderMain.module.css";
 import { Routes, Route, Link, Navigate, Router } from "react-router-dom";
 import {AiOutlineShopping} from 'react-icons/ai'
 import {BsSearch} from 'react-icons/bs'
+import PersistentDrawerLeft from '../MainContent/Slider/PersistentDrawerLeft';
 
 
 
 const HeaderMain = () => {
   return (
     <div className={styles.header_main}>
+        <PersistentDrawerLeft />
       <div className={styles.container}>
         <div className={styles.name_logo}>
           <Link to="/"><h1>MISTER</h1></Link>

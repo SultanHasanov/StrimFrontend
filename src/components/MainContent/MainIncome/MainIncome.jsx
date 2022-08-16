@@ -5,8 +5,9 @@ const MainIncome = () => {
   return (
     <div className={styles.main_income}>
       <div className={styles.title}>
-        <h1>НОВЫЕ ПОСТУПЛЕНИЯ</h1>
-        <div className={styles.liniya}></div>
+          <h1>НОВЫЕ ПОСТУПЛЕНИЯ</h1>
+        <div className={styles.new_income_block}>
+        </div>
       </div>
     </div>
   );

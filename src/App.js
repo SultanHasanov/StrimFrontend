@@ -7,6 +7,15 @@ import SignUp from "./pages/signUp/SignUp";
 import SignIn from "./pages/signIn/SignIn";
 import Footer from "./components/Footer/Footer";
 import { useSelector } from 'react-redux';
+import HeaderMain from './components/HeaderMain/HeaderMain';
+import MainContent from './components/MainContent/MainContent';
+import SignUp from './pages/signUp/SignUp';
+import SignIn from './pages/signIn/SignIn';
+import Footer from './components/Footer/Footer';
+import MyTeam from './pages/my-team/MyTeam';
+
+
+
 
 function App() {
   const token = useSelector((state) => state.user.token)
@@ -27,6 +36,7 @@ function App() {
   }
   return (
     <div className="App">
+
         <Header />
         <HeaderMain />
         <Routes>
@@ -36,6 +46,18 @@ function App() {
         </Routes>
         <Footer />
       </div>
+
+      <Header />
+      <HeaderMain />
+      <Routes>
+        <Route path='/' element={<MainContent />}/>
+        <Route path='/register' element={<SignUp/>}/>
+        <Route path='/auth' element={<SignIn />}/>
+        <Route path='/my-team' element={<MyTeam />}/>
+      </Routes>
+      <Footer />
+    </div>
+
   );
 }
 
