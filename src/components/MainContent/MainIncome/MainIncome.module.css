@@ -20,9 +20,53 @@
 
 
 .title {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.new_income_block {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 5rem;
+}
+
+
+.product {
+    width: 18rem;
+    margin: 0rem 0.8rem;
+}
+
+.product img {
+    width: 100%;
+}
+
+.info_product {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.info_product span {
+    margin-bottom: 0.5rem;
+}
+
+.catalog_block {
+    width: 25%;
+    margin: 1rem 0rem 2.5rem 0rem;
+}
+
+.catalog_block button {
+    width: 100%;
+    background: none;
+    font-family: Playfair Display;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    border: 0.1rem solid white;
+    height: 3rem;
 }

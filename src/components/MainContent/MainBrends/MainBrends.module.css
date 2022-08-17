@@ -1,0 +1,42 @@
+.main {
+    background-color: black;
+    font-family: Playfair Display;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pos {
+    margin: 2rem 0rem;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.brends_block {
+    margin: 1.5rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.brend {
+    width: 30%;
+}
+
+
+.image_block {
+    width: 100%;
+}
+
+.image_block img {
+    width: 100%;
+}

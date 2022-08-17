@@ -4,6 +4,7 @@ import styles from './MainContent.module.css'
 import MainCollection from './MainCollection/MainCollection'
 import MainIncome from './MainIncome/MainIncome'
 import PersistentDrawerLeft from './Slider/PersistentDrawerLeft'
+import MainBrends from './MainBrends/MainBrends'
 
 const MainContent = () => {
   return (
@@ -11,6 +12,7 @@ const MainContent = () => {
         <MainWelcome />
         <MainCollection />
         <MainIncome />
+        <MainBrends />
     </div>
   )
 }
