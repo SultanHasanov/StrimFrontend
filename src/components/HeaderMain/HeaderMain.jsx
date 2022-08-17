@@ -4,6 +4,8 @@ import { Routes, Route, Link, Navigate, Router } from "react-router-dom";
 import {AiOutlineShopping} from 'react-icons/ai'
 import {BsSearch} from 'react-icons/bs'
 import PersistentDrawerLeft from '../MainContent/Slider/PersistentDrawerLeft';
+import Navbar from "./dropDown/components/Navbar";
+import './Navbar.css'
 
 
 
@@ -19,11 +21,11 @@ const HeaderMain = () => {
           <div className={styles.info_buy}>
               <Link to="/favorite">ПОНРАВИЛОСЬ</Link>
               <Link to="/favorite">ЛИЧНЫЙ КАБИНЕТ</Link>
-              <Link to="/favorite">НАСТРОЙКИ</Link>
+              <Link to="/my-team">О НАС</Link>
               <Link to="/card"><AiOutlineShopping fontSize={"1.5rem"}/></Link>
-              <Link to="/search"><BsSearch fontSize={"1.1rem"}/></Link>
           </div>
         </div>
+        <div className='nav-area'><Navbar /></div>
       </div>
     </div>
   );
