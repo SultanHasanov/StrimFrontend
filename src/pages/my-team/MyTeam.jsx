@@ -1,68 +1,44 @@
-import React from 'react';
-import styles from './MyTeam.module.css'
-import mikail from '../my-team/image/mikail.png'
-import raibek from '../my-team/image/raibek.png'
-import { BsPersonFill } from 'react-icons/bs'
-
+import React from "react";
+import styles from "./MyTeam.module.css";
+import img1 from "./image/mikail.png";
+import img0 from "./image/img0.jpg";
 
 const MyTeam = () => {
-    return (
-        <div className="conteiner">
-        <div className={styles.wrapper}>
-            <h1 className={styles.name1}>Minkail</h1>
-            <div className={styles.bloc1}>
-                <img src={mikail}></img>
-            </div>
-                <div className={styles.bloc2}>
-                    <div className={styles.bloc3}>
-                    <h1 className={styles.name1}>Raibek</h1>
-                        <img src={raibek}></img>
-                    </div>
-                    <div className={styles.bloc3}>
-                        <h1 className={styles.name1}>Sultan</h1>
-                        <BsPersonFill className={styles.icon}/>
-                    </div>
-                    <div className={styles.bloc3}>
-                        <h1 className={styles.name1}>Turpal</h1>
-                        <BsPersonFill className={styles.icon}/>
-                    </div>
-                    <div className={styles.bloc3}>
-                        <h1 className={styles.name1}>Islam</h1>
-                        <BsPersonFill className={styles.icon}/>
-                    </div>
-                </div>
-                 </div>
-
-                <div className={styles.bloc4}>
-            <div className={styles.bloc5}>
-                    <h1 className={styles.name}>Minkail</h1>
-                <img className={styles.img_2} src={mikail}></img>
-                <div className={styles.text}>Тимлид и просто холоший человек</div>
-            </div>
-                    <div className={styles.bloc5}>
-                    <h1 className={styles.name}>Raibek</h1>
-                        <img className={styles.img_2} src={raibek}></img>
-                        <div className={styles.text}>Бэк и по совместительству зам тимлида</div>
-                    </div>
-                    <div className={styles.bloc5}>
-                        <h1 className={styles.name}>Sultan</h1>
-                        <BsPersonFill className={styles.icon_2}/>
-                        <div className={styles.text}>Верстка компонентов</div>
-                    </div>
-                    <div className={styles.bloc5}>
-                        <h1 className={styles.name}>Turpal</h1>
-                        <BsPersonFill className={styles.icon_2}/>
-                        <div className={styles.text}>Бэк</div>
-                    </div>
-                    <div className={styles.bloc5}>
-                        <h1 className={styles.name}>Islam</h1>
-                        <BsPersonFill className={styles.icon_2}/>
-                        <div className={styles.text}>Оффлайн</div>
-                    </div>
-                </div>
-       
+  return (
+    <div className={styles.wrapper}>
+      <span>Наша команда</span>
+      <div className={styles.our_team}>
+        <div className={styles.team}>
+            <img src={img1} alt="" />
+            <h2>Team Lead</h2>
         </div>
-    );
+      </div>
+      <span>О нас</span>
+      <div className={styles.about_us}>
+            <img src={img0} alt="" />
+            <div className={styles.context}>
+            Мы представляем вашему вниманию широчайший ассортимент мужских
+            костюмов – как в полных комплектациях, так и отдельные элементы. Здесь
+            вы также можете подобрать необходимые аксессуары и дополнительные
+            предметы одежды, такие как рубашки и галстуки. У нас вы всегда сможете
+            заказать красивый стильный костюм на любой случай жизни. Мужчины любой
+            комплектации и роста, телосложения, возраста, личных предпочтений в
+            стиле и моде – каждый здесь найдет идеальный для себя костюм, в
+            котором он будет выглядеть великолепно и достойно. Ассортимент
+            продукции постоянно пополняется, устаревшие модели снимаются с
+            продажи, а на их смену приходят более современные костюмы, которые
+            выполняются из качественных прочных тканей. Идеальный покрой, ровные
+            швы, качественная дорогая фурнитура – все это делает наши костюмы
+            востребованными и долговечными. Только здесь вам будут предложены
+            потрясающие модели, каждая из которых заслуживает отдельного внимания.
+            Разнообразие цветов, фасонов, тканей, силуэтов – все это и много
+            другое ждет вас на страницах нашего магазина. А мы, в свою очередь,
+            сделаем все необходимое, чтобы ваша покупка была максимально
+            комфортной и удачной.
+            </div>
+      </div>
+    </div>
+  );
 };
 
 export default MyTeam;
