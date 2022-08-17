@@ -51,7 +51,7 @@ const SignUp = () => {
 
     return (
         <div className={styles.signUp}>
-                <h1 className={styles.reg}>Зарегистрироваться</h1>
+                <h1 className={styles.reg}>Регистрация</h1>
             <form className={styles.form} onChange={handleSubmit}>
                 <input type="text" placeholder='Имя' value={name} onChange={handleName} required/>
                 <input type="text" placeholder='Фамилия' value={surname} onChange={handleSurName} required/>
