@@ -8,6 +8,7 @@ import SignIn from "./pages/signIn/SignIn";
 import Footer from "./components/Footer/Footer";
 import { useSelector } from 'react-redux';
 import MyTeam from './pages/my-team/MyTeam';
+import MainProducts from "./pages/MainProducts/MainProducts";
 
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/register" element={<Navigate to="/" />} />
           <Route path="/auth" element={<Navigate to="/" />} />
           <Route path="/my-team" element={<MyTeam />} />
+          <Route path="/products" element={<MainProducts />} />
         </Routes>
         <Footer />
       </div>

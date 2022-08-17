@@ -4,6 +4,7 @@ export const menuItems = [
       submenu: [
         {
           title: "ВСЕ ТОВАРЫ",
+          path: "products"
         },
         {
           title: "КОСТЮМЫ",
@@ -16,7 +17,7 @@ export const menuItems = [
             },
             {
               title: "БРЮКИ",
-              path: "WRYYYYYYYYYYYYY"
+              path: "awdawdadw"
             },
           ],
         },
