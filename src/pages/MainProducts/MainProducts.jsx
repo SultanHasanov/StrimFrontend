@@ -2,10 +2,21 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./MainProducts.module.css";
 import Products from "./Products";
+import {AiOutlineSearch} from "react-icons/ai"
+import { useState } from "react";
 
 const MainProducts = () => {
     const product = useSelector((state) => state.products.products)
     console.log(product)
+    const [search, setSearch] = useState('')
+
+    const liveSearch = product.filter(item => {
+        return item.name.toLowerCase().includes(search.toLowerCase())
+    })
+
+    const handleChange = (e) => {
+        setSearch(e.target.value)
+    }
 
     const catgories = [
         {
@@ -50,6 +61,10 @@ const MainProducts = () => {
           <div className={styles.title}>
               <span>РАЗДЕЛЫ</span>
           </div>
+          <div className={styles.search}>
+              <input type="text" required value={search} onChange={handleChange}/>
+              <span><AiOutlineSearch fontSize={"26"}/></span>
+          </div>
               <ul className={styles.tovars}>
                   {catgories.map((categories, index) => {
                       return (
@@ -58,7 +73,7 @@ const MainProducts = () => {
                   })}
               </ul>
       </div>
-      <Products />
+      <Products liveSearch={liveSearch}/>
     </div>
   );
 };
