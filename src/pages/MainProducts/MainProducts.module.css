@@ -112,3 +112,21 @@
     display: flex;
     background-color: red;
 }
+
+
+.search {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0rem 0rem 0rem 2.5rem;
+}
+
+.search input {
+    font-size: 1.1rem;
+    padding: 0rem 1rem 0rem 2rem;
+}
+
+
+.search span {
+    position: absolute;
+}

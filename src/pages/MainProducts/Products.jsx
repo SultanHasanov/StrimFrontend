@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import {RiCheckboxBlankCircleFill} from 'react-icons/ri'
 import { getProducts } from "../../components/features/productsSlice";
 
-const Products = () => {
+const Products = (props) => {
   const dispatch = useDispatch();
   const allProducts = useSelector((state) => state.products.products);
 
@@ -13,7 +13,7 @@ const Products = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
-  const products = allProducts.map((item, index) => {
+  const products = props.liveSearch.map((item, index) => {
     if (item.size === "XL") {
       return (
         <div className={styles.product} key={item._id}>
