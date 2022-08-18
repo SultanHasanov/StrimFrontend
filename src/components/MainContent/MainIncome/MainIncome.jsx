@@ -56,7 +56,7 @@ const MainIncome = () => {
 
         <div className={styles.catalog_block}>
           <button>
-            <Link to="/catalog">ПРОСМОТРЕТЬ ТОВАРЫ</Link>
+            <Link to="/products">ПРОСМОТРЕТЬ ТОВАРЫ</Link>
           </button>
         </div>
       </div>
