@@ -1,44 +1,66 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import styles from './MainProducts.module.css'
-import { useEffect } from 'react';
-import { getProducts } from '../../components/features/productsSlice';
+import React from "react";
+import { useSelector } from "react-redux";
+import styles from "./MainProducts.module.css";
+import Products from "./Products";
 
 const MainProducts = () => {
-    const dispatch = useDispatch()
-    const allProducts = useSelector((state) => state.products.products)
-    console.log(allProducts)
+    const product = useSelector((state) => state.products.products)
+    console.log(product)
 
-    useEffect(() => {
-        dispatch(getProducts())
-    },[dispatch])
+    const catgories = [
+        {
+            id: 1,
+            title: "Все товары"
+        },
 
-    const products = allProducts.map((item, index) => {
-        const imagesGet = item.images.map((product) => {
-            return (
-                <img src={product.image} alt='logo'></img>
-            )
-        })
-        return (
-            <div className={styles.product} key={item._id} >
-                <div className={styles.image}>
-                    <div>{imagesGet}</div>
-                </div>
-            </div>
-        )
-    })
+        {
+            id: 2,
+            title: "Костюмы"
+        },
 
+        {
+            id: 3,
+            title: "Брюки"
+        },
+
+        {
+            id: 4,
+            title: "Очки"
+        },
+
+        {
+            id: 5,
+            title: "Рубашки"
+        },
+
+        {
+            id: 6,
+            title: "Часы"
+        },
+
+        {
+            id: 7,
+            title: "Обувь"
+        }
+    ]
 
   return (
     <div className={styles.main}>
-        <div className={styles.categories}>
-            1
-        </div>
-        <div className={styles.products}>
-            {products}
-        </div>
+      <div className={styles.categories}>
+          <div className={styles.title}>
+              <span>РАЗДЕЛЫ</span>
+          </div>
+              <ul className={styles.tovars}>
+                  {catgories.map((categories, index) => {
+                      return (
+                          <li>{categories.title}</li>
+                      )
+                  })}
+              </ul>
+      </div>
+      <Products />
     </div>
-  )
-}
+  );
+};
 
-export default MainProducts
+export default MainProducts;

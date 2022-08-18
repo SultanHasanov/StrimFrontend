@@ -1,23 +1,114 @@
 .main {
     width: 100%;
     display: flex;
+    color: black;
+    font-family: Playfair Display;
+    font-size: 0.6rem;
+    justify-content: space-around;
     background-color: rgb(255, 255, 255);
     flex: 1 1 auto;
 }
 
-
-.categories {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
+.main li {
+    list-style-type: none;
 }
 
 
-.products {
-    width: 65%;
+.categories {
+    width: 25%;
+    color: black;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.product_info {
+    font-size: 1rem;
+    min-height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.products {
+    width: calc(75% - 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+
+.product {
+    width: 80%;
+    margin: 1rem 0rem;
+}
+
+
+.image {
+    width: 100%;
+}
+
+
+.image img {
+    width: 100%;
+}
+
+
+.empty {
+    display: none;
+}
+
+
+.tovars { 
+    width: calc(100% - 1rem);
+    margin: 1rem 0rem 0rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 2.5rem;
+}
+
+.tovars>li:hover {
+    background-color: white;
+}
+
+.title {
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn {
+    width: 100%;
+}
+
+.btn button {
+    font-family: Playfair Display;
+    height: 2.5rem;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: none;
+    border: none;
+}
+
+.btn button:hover {
     background-color: black;
+    transform: scale(1.1);
+    color: white;
+    transition-duration: 0.2s;
+}
+
+
+.colors {
+    width: 100%;
+    display: flex;
+    background-color: red;
 }
