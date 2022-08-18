@@ -16,7 +16,6 @@ export const postUser = createAsyncThunk("user/create", async ({ name, surname, 
             return thunkAPI.rejectWithValue(json.error)
         }
         return json
-    
     }
     catch(e) {
         thunkAPI.rejectWithValue(e.message)
