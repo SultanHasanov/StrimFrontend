@@ -7,17 +7,30 @@ const CartPage = () => {
 
         const dispatch = useDispatch();
 
-        const cart = useSelector((state) => state.cart.products);
+        const cart = useSelector((state) => state.cart.cart.products);
+        console.log(cart)
 
         useEffect(() => {
             dispatch(getCart());
         }, [dispatch]);
 
-        return (
-        <div className={styles.back}>
-            123
-        </div>
-    );
+        if(cart) {
+            const random = cart.map((item) => {
+                return (
+                    <div>adadw</div>
+                )
+            })
+    
+    
+    
+            return (
+            <div className={styles.back}>
+                {random}
+            </div>
+        );
+        }
+
+        
 };
 
 export default CartPage;

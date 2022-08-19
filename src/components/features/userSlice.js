@@ -9,8 +9,6 @@ const initialState = {
     token: localStorage.getItem('token'),
 };
 
-console.log(initialState.userId)
-
 function parseJwt (token) {
     var base64Url = token.split('.')[1];
     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
