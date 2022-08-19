@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux';
 import MyTeam from './pages/my-team/MyTeam';
 import MainProducts from "./pages/MainProducts/MainProducts";
 import CartPage from "./pages/Cart/CartPage";
+import CabinetPage from './pages/Cabinet/CabinetPage';
+import CabinetChange from './pages/Cabinet/CabinetChange';
 
 
 
@@ -43,6 +45,8 @@ function App() {
           <Route path="/my-team" element={<MyTeam />} />
           <Route path="/products" element={<MainProducts />} />
           <Route path="/cart" element={<CartPage />}></Route>
+          <Route path="/cabinet" element={<CabinetPage />}></Route>
+          <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         </Routes>
         <Footer />
       </div>
