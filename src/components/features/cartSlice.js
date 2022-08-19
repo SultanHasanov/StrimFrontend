@@ -37,11 +37,9 @@ const cartSlice = createSlice({
         builder
         .addCase(getCart.fulfilled, (state, action) => {
             state.cart = action.payload
-            console.log(state.cart)
         })
         .addCase(getCart.rejected, (state, action) => {
             state.error = action.payload
-            console.log(action.payload)
         })
         builder
         .addCase(addProductInBasket.fulfilled, (state, action) => {
