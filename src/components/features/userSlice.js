@@ -3,9 +3,22 @@ import axios from "axios"
 
 const initialState = {
     error: null,
+    userId: localStorage.getItem('user'),
     signingIn: false,
     signingUp: false,
     token: localStorage.getItem('token'),
+};
+
+console.log(initialState.userId)
+
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
 };
 
 export const postUser = createAsyncThunk("user/create", async ({ name, surname, phone, login, password }, thunkAPI) => {
@@ -29,7 +42,8 @@ export const postLogin = createAsyncThunk("auth/SignUp", async ({login, password
         if(data.error) {
             return thunkAPI.rejectWithValue(data.error)
         }
-        localStorage.setItem("token", data)
+        localStorage.setItem("token", data.token)
+        localStorage.setItem("user", parseJwt(data.token).id)
         return thunkAPI.fulfillWithValue(data);
     } catch (error) {
         thunkAPI.rejectWithValue(error.message)
