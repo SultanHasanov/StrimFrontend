@@ -20,7 +20,7 @@ const HeaderMain = () => {
         <div className={styles.buy_settings}>
           <div className={styles.info_buy}>
               <Link to="/favorite">ПОНРАВИЛОСЬ</Link>
-              <Link to="/favorite">ЛИЧНЫЙ КАБИНЕТ</Link>
+              <Link to="/cabinet">ЛИЧНЫЙ КАБИНЕТ</Link>
               <Link to="/my-team">О НАС</Link>
               <Link to="/cart"><AiOutlineShopping fontSize={"1.5rem"}/></Link>
           </div>

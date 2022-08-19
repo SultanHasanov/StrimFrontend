@@ -35,6 +35,20 @@ export const postUser = createAsyncThunk("user/create", async ({ name, surname, 
     }
 })
 
+export const patchUser = createAsyncThunk("user/patch", async ({ userId, name, surname, phone, login, password }, thunkAPI) => {
+    try {
+        const res = await axios.patch(`http://localhost:4000/user/${userId}`, {name, surname, phone, login, password})
+        const json = await res.json()
+        if(json.error){
+            return thunkAPI.rejectWithValue(json.error)
+        }
+        return json
+    }
+    catch(e) {
+        thunkAPI.rejectWithValue(e.message)
+    }
+})
+
 export const postLogin = createAsyncThunk("auth/SignUp", async ({login, password}, thunkAPI) => {
     try {
         const response = await axios.post("http://localhost:4000/login", {login, password});

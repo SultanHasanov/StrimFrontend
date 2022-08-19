@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import styles from './SignUp.module.css'
+import styles from './CabinetChange.module.css'
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import { postUser } from '../../components/features/userSlice';
+import { patchUser } from '../../components/features/userSlice';
 import { useDispatch } from 'react-redux';
 
 
-const SignUp = () => {
+const CabinetChange = () => {
     const dispatch = useDispatch()
+    const userId = localStorage.getItem('user');
     
     const [state, setState] = useState(false)
-    const [name, setName] = useState('')
-    const [surname, setSurName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
+    const [name, setName] = useState(localStorage.getItem('name'))
+    const [surname, setSurName] = useState(localStorage.getItem('surname'))
+    const [phone, setPhone] = useState(localStorage.getItem('phone'))
+    const [login, setLogin] = useState(localStorage.getItem('login'))
+    const [password, setPassword] = useState(localStorage.getItem('password'))
     const [passwordError, setPasswordError] = useState('')
     const [nameError, setNameError] = useState('')
     const [surNameError, setSurNameError] = useState('')
@@ -88,7 +89,7 @@ const SignUp = () => {
     }
 
     const handleSignUp = () => {
-        dispatch(postUser({name, surname, phone, login, password}))
+        dispatch(patchUser({ userId, name, surname, phone, login, password }))
         localStorage.setItem('name', name)
         localStorage.setItem('surname', surname)
         localStorage.setItem('phone', phone)
@@ -102,7 +103,7 @@ const SignUp = () => {
 
     return (
         <div className={styles.signUp}>
-                <h1 className={styles.reg}>Регистрация</h1>
+                <h1 className={styles.reg}>Изменение данных</h1>
             <form className={styles.form} onChange={handleSubmit}>
                 <input type="text" placeholder='Имя' value={name} onChange={handleName} required/>
                 {nameError && <div style={{color:'red', textAlign: 'left', fontSize: '0.8rem'}}>{nameError}</div>}
@@ -112,16 +113,12 @@ const SignUp = () => {
                 {phoneError && <div style={{color:'red', textAlign: 'left', fontSize: '0.8rem'}}>{phoneError}</div>}
                 <input type="text" placeholder='Логин' value={login} onChange={handleLogin} required/>
                 {loginError && <div style={{color:'red', textAlign: 'left', fontSize: '0.8rem'}}>{loginError}</div>}
-                <div className={styles.password}>
-                <input type={state ? 'text' : 'password'} placeholder='Пароль' value={password} onChange={handlePassword} required/>
-                {state ? <AiOutlineEyeInvisible onClick={handleToggle} className={styles.glaz}/> : <AiOutlineEye onClick={handleToggle} className={styles.glaz}/>}
-                </div>
-                {passwordError && <div style={{color:'red', textAlign: 'left', fontSize: '0.8rem'}}>{passwordError}</div>}
-                <button className={styles.btn} onClick={handleSignUp}>Зарегистрироваться</button>
-                <div className={styles.text}>Если вы уже зарегистрированы <Link className={styles.regist} to="/auth">Войдите</Link></div>
+                <Link to='/cabinet'><button className={styles.btn} onClick={handleSignUp}>Изменить данные</button></Link>
+                <div className={styles.text}>Если вы не хотите изменять данные: <Link className={styles.regist} to="/cabinet">Выйти</Link></div>
             </form>
         </div>
     );
 };
 
-export default SignUp;
+
+export default CabinetChange;
