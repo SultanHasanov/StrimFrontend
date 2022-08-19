@@ -22,7 +22,7 @@ const HeaderMain = () => {
               <Link to="/favorite">ПОНРАВИЛОСЬ</Link>
               <Link to="/favorite">ЛИЧНЫЙ КАБИНЕТ</Link>
               <Link to="/my-team">О НАС</Link>
-              <Link to="/card"><AiOutlineShopping fontSize={"1.5rem"}/></Link>
+              <Link to="/cart"><AiOutlineShopping fontSize={"1.5rem"}/></Link>
           </div>
         </div>
         <div className='nav-area'><Navbar /></div>

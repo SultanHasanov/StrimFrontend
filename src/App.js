@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import { useSelector } from 'react-redux';
 import MyTeam from './pages/my-team/MyTeam';
 import MainProducts from "./pages/MainProducts/MainProducts";
+import CartPage from "./pages/Cart/CartPage";
 
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/auth" element={<Navigate to="/" />} />
           <Route path="/my-team" element={<MyTeam />} />
           <Route path="/products" element={<MainProducts />} />
+          <Route path="/cart" element={<CartPage />}></Route>
         </Routes>
         <Footer />
       </div>

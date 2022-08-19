@@ -4,6 +4,7 @@ import styles from "./MainProducts.module.css";
 import { useEffect } from "react";
 import {RiCheckboxBlankCircleFill} from 'react-icons/ri'
 import { getProducts } from "../../components/features/productsSlice";
+import { addProductInBasket } from "../../components/features/cartSlice";
 
 const Products = (props) => {
   const dispatch = useDispatch();
@@ -12,6 +13,11 @@ const Products = (props) => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+
+  const handleAddInBasket = (productId) => {
+    console.log(productId)
+    dispatch(addProductInBasket({productId}))
+  }
 
   const products = props.liveSearch.map((item, index) => {
     if (item.size === "XL") {
@@ -34,7 +40,7 @@ const Products = (props) => {
                 <span>{item.price}₽</span>
             </div>
             <div className={styles.btn}>
-                <button>Добавить в корзину</button>
+                <button onClick={() => handleAddInBasket(item._id)}>Добавить в корзину</button>
             </div>
           </div>
         </div>
