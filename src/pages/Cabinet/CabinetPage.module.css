@@ -1,31 +1,54 @@
 .body {
+    font-family: Playfair Display;
     display: flex;
+    width: 100%;
     justify-content: center;
-    background-color: white;
+    background-color: black
 }
 
 .bodyMain {
-    background-color: whitesmoke;
+    background-color: black;
     color: black;
-    width: 80%;
+    width: 50%;
     height: 100%;
 }
 
 .login {
+    border-radius: 3px;
     font-size: 3rem;
     margin-top: 0.5rem;
+    font-weight: bold;
+    background-color:whitesmoke;
 }
 
 .infoTitle {
+    border-radius: 3px;
     font-size: 2rem;
+    background-color:whitesmoke
 }
 
 .info {
+    border-radius: 3px;
     font-size: 1.5rem;
     margin-top: 1rem;
+    background-color:whitesmoke
 }
 
 .link {
     color: blue;
 }
 
+.photo {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color:white;
+    border-radius: 3px;
+}
+
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+
+}
