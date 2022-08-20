@@ -17,7 +17,7 @@ const CartPage = () => {
         if(cart) {
             const random = cart.map((item) => {
                 return (
-                    <div>adadw</div>
+                    <div>{item.productId}</div>
                 )
             })
     
