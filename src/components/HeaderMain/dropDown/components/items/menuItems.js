@@ -4,25 +4,31 @@ export const menuItems = [
       submenu: [
         {
           title: "ВСЕ ТОВАРЫ",
-          path: "products"
+          path: "all-tovars"
         },
         {
           title: "КОСТЮМЫ",
-          submenu: [
-            {
-                title: "КОСТЮМЫ",
-            },
-            {
-              title: "РУБАШКИ",
-            },
-            {
-              title: "БРЮКИ",
-              path: "awdawdadw"
-            },
-          ],
+          path: "kostums"
+        },
+        {
+          title: "БРЮКИ",
+          path: "bruks"
+        },
+        {
+          title: "ОЧКИ",
+          path: "ochki"
+        },
+        {
+          title: "РУБАШКИ",
+          path: "rubashks"
+        },
+        {
+          title: "ЧАСЫ",
+          path: "clocks"
         },
         {
           title: "ОБУВЬ",
+          path: "obuv"
         },
       ],
     },
