@@ -10,12 +10,14 @@ import { useSelector } from 'react-redux';
 import MyTeam from './pages/my-team/MyTeam';
 import MainProducts from "./pages/MainProducts/MainProducts";
 import CartPage from "./pages/Cart/CartPage";
+import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 
 
 
 
 function App() {
   const token = useSelector((state) => state.user.token)
+  const product = useSelector((state) => state.products.products)
 
   if (!token || token === 'Неверный пароль' || token === 'Неверный логин' || token === 'Неверный логин или пароль') {
     return (
@@ -43,6 +45,7 @@ function App() {
           <Route path="/my-team" element={<MyTeam />} />
           <Route path="/products" element={<MainProducts />} />
           <Route path="/cart" element={<CartPage />}></Route>
+          <Route path="/all-tovars" element={<AllProducts />} />
         </Routes>
         <Footer />
       </div>
