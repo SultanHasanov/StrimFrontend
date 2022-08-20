@@ -15,12 +15,7 @@ const MainProducts = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart.products)
-  console.log(cart)
-
-  const liveSearch = product.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
-  });
-
+  
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
@@ -28,6 +23,10 @@ const MainProducts = () => {
   useEffect(() => {
     dispatch(getCart());
   }, [dispatch]);
+
+  const liveSearch = product.filter((item) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  });
 
   const handleChange = (e) => {
     setSearch(e.target.value);

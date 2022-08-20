@@ -11,7 +11,7 @@ const user = localStorage.getItem('user')
 
 export const getCart = createAsyncThunk("get/cart", async (_, thunkAPI) => {
     try {
-        const response = await axios.get(`http://localhost:4000/cart/${user}`, )
+        const response = await axios.get(`http://localhost:4000/cart/${user}`)
         return response.data
     } catch (error) {
         thunkAPI.rejectWithValue(error.message)

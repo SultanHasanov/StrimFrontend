@@ -28,7 +28,7 @@ const Products = (props) => {
   const handleAddInBasket = (productId) => {
     dispatch(addProductInBasket({ productId }));
   };
-  console.log(props);
+
   const buttonOff = props.cartInfo.find(item => item.productId === props.product._id)
 
   return (
