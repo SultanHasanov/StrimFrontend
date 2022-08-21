@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./MainIncome.module.css";
 import { Link } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+
 
 const MainIncome = () => {
   const icomeProducts = [
@@ -32,6 +35,8 @@ const MainIncome = () => {
       name: "Andrew Marc Men's",
       price: 17500,
     },
+
+    
   ];
 
   const getProducts = icomeProducts.map((item, index) => {
@@ -47,12 +52,16 @@ const MainIncome = () => {
       </div>
     );
   });
-
+  
   return (
     <div className={styles.main_income}>
       <div className={styles.title}>
         <h1>НОВЫЕ ПОСТУПЛЕНИЯ</h1>
-        <div className={styles.new_income_block}>{getProducts}</div>
+        <div className={styles.new_income_block}>
+      <Carousel>
+          {getProducts}
+      </Carousel>
+          </div>
 
         <div className={styles.catalog_block}>
           <button>

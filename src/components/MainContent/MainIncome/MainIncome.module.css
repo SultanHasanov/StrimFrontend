@@ -37,7 +37,11 @@
 
 .product {
     width: 18rem;
-    margin: 0rem 0.8rem;
+    /* margin: 0rem 0.8rem; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+
 }
 
 .product img {
@@ -70,3 +74,9 @@
     border: 0.1rem solid white;
     height: 3rem;
 }
+
+
+
+
+
+
