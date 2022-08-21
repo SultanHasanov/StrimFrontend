@@ -7,7 +7,7 @@ const initialState = {
     error: null,
 }
 
-export const getPofileRequest = createAsyncThunk("/profile", async (userId, thunkAPI) => {
+export const getPofileRequest = createAsyncThunk("/profile", async ({userId}, thunkAPI) => {
     try {
         const response = await axios.get(`http://localhost:4000/profile/${userId}`)
         return response.data
