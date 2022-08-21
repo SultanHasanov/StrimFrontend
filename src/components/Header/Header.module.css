@@ -28,3 +28,9 @@
     display: flex;
     justify-content: space-around;
 }
+
+.block_reg {
+    width: 8rem;
+    display: flex;
+    justify-content: space-between;
+}

@@ -7,9 +7,9 @@ import photo from './photo-v-lk/photo v lk.png'
 
 const CabinetPage = () => {
     const {profile} = useSelector(state => state);
-    console.log({profile});
+    // console.log({profile});
     const {token} = useSelector(state => state.user)
-    console.log({token});
+    // console.log({token});
     const dispatch = useDispatch();
     const id = localStorage.getItem('login')
     // const name = localStorage.getItem('name')
@@ -33,7 +33,7 @@ const CabinetPage = () => {
             {profile.profile.name}
           </div>
           <div className={styles.info}>
-            <span style={{ fontWeight: "bold" }}>Фамилия: </span>{" "}
+            <span style={{ fontWeight: "bold" }}>Фамилия: </span>
             {profile.profile.surname}
           </div>
           <div className={styles.info}>
