@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   const catgories = [
     {
-      id: 1,
-      title: "Все товары",
-      route: "all-tovars"
-    },
-
-    {
       id: 2,
       title: "Костюмы",
       route: "kostums"

@@ -35,11 +35,13 @@ const Products = (props) => {
     <div className={styles.product}>
       <div className={styles.image}>
         <div>
-          {props.images.map((item) => {
-            return <img src={item.image} />;
-          })}
+          <img src={props.images[0].image}/>
+        </div>
+        <div class>
+          <button></button>
         </div>
         <div className={styles.product_info}>
+          <span>{props.product.size}</span>
           <span>{props.product.name}</span>
           <span>{props.product.price}₽</span>
         </div>
