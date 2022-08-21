@@ -30,10 +30,17 @@ function App() {
         <Header />
         <HeaderMain />
         <Routes>
-          <Route path="/" element={<Navigate to="/register" />} />
+          <Route path="/" element={<MainContent />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/auth" element={<SignIn />} />
           <Route path="/my-team" element={<MyTeam />} />
+          <Route path="/products" element={<MainProducts />} />
+          <Route path="/cart" element={<Navigate to="/register" />}></Route>
+          <Route path="/all-tovars" element={<AllProducts />} />
+          <Route path="/cabinet" element={<Navigate to="/register" />}></Route>
+          <Route path="/cabinetchange" element={<Navigate to="/register" />}></Route>
+          <Route path="/buy" element={<Navigate to="/register" />}></Route>
+          <Route path="/favorite" element={<Navigate to="/register" />}></Route>
         </Routes>
         <Footer />
       </div>
@@ -54,6 +61,7 @@ function App() {
         <Route path="/cabinet" element={<CabinetPage />}></Route>
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         <Route path="/buy" element={<BuyPage />}></Route>
+        <Route path="/favorite" element={<BuyPage />}></Route>
       </Routes>
       <Footer />
     </div>
