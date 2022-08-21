@@ -31,7 +31,7 @@ export const addProductInFavorite = createAsyncThunk("add/favorite", async ({pro
 
 export const deleteProductFromFavorite = createAsyncThunk("delete/favorite", async ({productId}, thunkAPI) => {
     try {
-        const response = await axios.delete(`http://localhost:4000/favorite/delete/${user}`, { product: productId})
+        const response = await axios.delete(`http://localhost:4000/favorite/delete/${user}`, { data: { product: productId}})
         console.log(user)
         console.log(productId)
         return response.data
@@ -46,6 +46,11 @@ const favoriteSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
+        builder
+        .addCase(getFavorite.fulfilled, (state, action) => {
+            state.favorite = action.payload
+            console.log(action)
+        })
     }
 })
 

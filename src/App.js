@@ -14,6 +14,7 @@ import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 import CabinetPage from "./pages/Cabinet/CabinetPage";
 import CabinetChange from "./pages/Cabinet/CabinetChange";
 import BuyPage from "./pages/Buy/BuyPage";
+import FavoritePage from './pages/Favorite/FavoritePage';
 
 function App() {
   const token = useSelector((state) => state.user.token);
@@ -61,7 +62,7 @@ function App() {
         <Route path="/cabinet" element={<CabinetPage />}></Route>
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         <Route path="/buy" element={<BuyPage />}></Route>
-        <Route path="/favorite" element={<BuyPage />}></Route>
+        <Route path="/favorite" element={<FavoritePage />}></Route>
       </Routes>
       <Footer />
     </div>
