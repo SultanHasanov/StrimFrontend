@@ -5,7 +5,12 @@ import { getCart } from "./../../components/features/cartSlice";
 import { VscLocation } from "react-icons/vsc";
 import { GiBusStop } from "react-icons/gi";
 import { getProducts } from "../../components/features/productsSlice";
-import { deleteProductInBasket } from "./../../components/features/cartSlice";
+import {
+  deleteProductInBasket,
+  incrementAmountProduct,
+  decrementAmountProduct,
+} from "./../../components/features/cartSlice";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -15,13 +20,19 @@ const CartPage = () => {
   }, [dispatch]);
 
   const handleDelete = (productId) => {
-      dispatch(deleteProductInBasket({productId}))
-  }
+    dispatch(deleteProductInBasket({ productId }));
+  };
+  const handleIncrement = (productId) => {
+    dispatch(incrementAmountProduct({ productId }));
+  };
+
+  const handleDecrement = (productId) => {
+    dispatch(decrementAmountProduct({ productId }));
+  };
 
   const cart = useSelector((state) => state.cart.cart.products);
   const products = useSelector((state) => state.products.products);
   const imageProducts = useSelector((state) => state.products.products.name);
-
 
   useEffect(() => {
     dispatch(getCart());
@@ -60,17 +71,30 @@ const CartPage = () => {
                         <td>{product.size}</td>
                         <td>{product.price} ₽</td>
                         <td>
-                          <button className={styles.btn1}>+</button>
+                          <button
+                            className={styles.btn1}
+                            onClick={() => handleIncrement(cartItem.productId)}
+                          >
+                            +
+                          </button>
                           <span>{cartItem.amount}</span>
-                          <button className={styles.btn2}>-</button>
+                          <button
+                            disabled={cartItem.amount <= 1 ? true : false}
+                            className={styles.btn2}
+                            onClick={() => handleDecrement(cartItem.productId)}
+                          >
+                            -
+                          </button>
                         </td>
-                        <td>{product.price} ₽</td>
+                        <td>{cartItem.amount * product.price} ₽</td>
                       </tr>
                     </tbody>
                   </table>
                   <div className={styles.next_func}>
                     <button>Сохранить на потом</button>
-                    <button onClick={() => handleDelete(cartItem.productId)}>Удалить</button>
+                    <button onClick={() => handleDelete(cartItem.productId)}>
+                      Удалить
+                    </button>
                   </div>
                 </div>
               </div>
@@ -110,7 +134,9 @@ const CartPage = () => {
                 <h2>{}</h2>
               </div>
               <div className={styles.btn_oplata}>
-                <button>ПЕРЕЙТИ К ОПЛАТЕ</button>
+                <Link to="/buy">
+                  <button>ПЕРЕЙТИ К ОПЛАТЕ</button>
+                </Link>
               </div>
             </div>
             <div className={styles.sposob_oplati}></div>
