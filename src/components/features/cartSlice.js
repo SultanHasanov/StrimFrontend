@@ -19,6 +19,28 @@ export const getCart = createAsyncThunk("get/cart", async (_, thunkAPI) => {
 })
 
 
+export const incrementAmountProduct = (createAsyncThunk("inc/cart", async ({productId}, thunkAPI) => {
+    try {
+        const response = await axios.patch(`http://localhost:4000/cart/inc/${user}`, {product: productId})
+        console.log(response)
+        return response.data
+    } catch (error) {
+        thunkAPI.rejectWithValue(error.message)
+    }
+}))
+
+
+export const decrementAmountProduct = (createAsyncThunk("dec/cart", async ({productId}, thunkAPI) => {
+    try {
+        const response = await axios.patch(`http://localhost:4000/cart/dec/${user}`, {product: productId})
+        console.log(response)
+        return response.data
+    } catch (error) {
+        thunkAPI.rejectWithValue(error.message)
+    }
+}))
+
+
 export const addProductInBasket = createAsyncThunk("add/cart", async ({productId}, thunkAPI) => {
     try {
         const response = await axios.post(`http://localhost:4000/cart/add/${user}`, { product: productId})
@@ -65,6 +87,12 @@ const cartSlice = createSlice({
             state.cart = action.payload
         })
         .addCase(deleteProductInBasket.rejected, (state, action) => {
+        })
+        .addCase(incrementAmountProduct.fulfilled, (state, action) => {
+            state.cart = action.payload
+        })
+        .addCase(decrementAmountProduct.fulfilled, (state, action) => {
+            state.cart = action.payload
         })
     }
 })

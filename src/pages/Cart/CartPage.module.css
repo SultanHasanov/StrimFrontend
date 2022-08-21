@@ -85,7 +85,7 @@
 }
 
 .info_prices {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -198,6 +198,10 @@
     border: none;
     transition-duration: 0.3s;
     background-color: rgba(15, 15, 15, 1);
+}
+
+.btn_oplata a {
+    width: 100%;
 }
 
 .btn_oplata button:hover {
