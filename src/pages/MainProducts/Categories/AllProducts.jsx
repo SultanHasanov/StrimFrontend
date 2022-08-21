@@ -2,26 +2,32 @@ import React, { useEffect } from 'react'
 import styles from '../MainProducts.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { addProductInBasket, getCart } from '../../../components/features/cartSlice';
-import { getProducts } from '../../../components/features/productsSlice';
+import { getCostums, getProducts } from '../../../components/features/productsSlice';
 
 const AllProducts = (props) => {
     const dispatch = useDispatch();
     const allProducts = useSelector((state) => state.products.products);
     const cart = useSelector((state) => state.cart.cart.products);
+    const costums = useSelector((state) => state.products.costums)
+    console.log(costums)
   
+    // useEffect(() => {
+    //   dispatch(getProducts());
+    // }, [dispatch]);
+
+
     useEffect(() => {
-      dispatch(getProducts());
-    }, [dispatch]);
+      dispatch(getCostums())
+    }, [dispatch])
   
-    useEffect(() => {
-      dispatch(getCart());
-    }, [dispatch]);
-    console.log(props.product)
+    // useEffect(() => {
+    //   dispatch(getCart());
+    // }, [dispatch]);
   
     const handleAddInBasket = (productId) => {
       dispatch(addProductInBasket({ productId }));
     };
-    if (cart) {
+    if (costums) {
         if(allProducts.category === "Часы") {
             return (
                 <div className={styles.product}>
