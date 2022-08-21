@@ -20,7 +20,7 @@ const FavoritePage = () => {
   const handleDelete = (productId) => {
       dispatch(deleteProductInBasket({productId}))
   }
-  const favorite = useSelector((state) => state.products);
+  const favorite = useSelector((state) => state.favorite);
 
       console.log(favorite)
       console.log("123")

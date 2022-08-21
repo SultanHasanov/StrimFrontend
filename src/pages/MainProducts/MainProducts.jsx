@@ -7,7 +7,6 @@ import { Link, Route, Routes } from "react-router-dom";
 import Categories from "./Categories";
 import { useEffect } from "react";
 import { getProducts } from "../../components/features/productsSlice";
-import AllProducts from "./Categories/AllProducts";
 import { getCart } from "../../components/features/cartSlice";
 import { getFavorite } from './../../components/features/favoriteSlice';
 
