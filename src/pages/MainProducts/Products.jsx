@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./MainProducts.module.css";
 import { useEffect } from "react";
-import { RiCheckboxBlankCircleFill } from "react-icons/ri";
+import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { getProducts } from "../../components/features/productsSlice";
 import {
   addProductInBasket,
   getCart,
 } from "../../components/features/cartSlice";
+import { addProductInFavorite } from "../../components/features/favoriteSlice";
 
 const Products = (props) => {
   const dispatch = useDispatch();
@@ -27,6 +28,10 @@ const Products = (props) => {
 
   const handleAddInBasket = (productId) => {
     dispatch(addProductInBasket({ productId }));
+  };
+
+  const handleAddInFavorite = (productId) => {
+    dispatch(addProductInFavorite({ productId }));
   };
 
   const buttonOff = props.cartInfo.find(item => item.productId === props.product._id)
@@ -49,6 +54,7 @@ const Products = (props) => {
           <button disabled={buttonOff} onClick={() => handleAddInBasket(props.product._id)}>
             Купить
           </button>
+          <FcLikePlaceholder fontSize={"2rem"} onClick={() => handleAddInFavorite(props.product._id)} cursor='pointer'/>
         </div>
       </div>
     </div>
