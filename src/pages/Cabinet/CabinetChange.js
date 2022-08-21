@@ -4,6 +4,7 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { patchUser } from '../../components/features/userSlice';
 import { useDispatch } from 'react-redux';
+import { changeProfileRequest } from '../../components/features/profile.Slice';
 
 
 const CabinetChange = () => {
@@ -89,11 +90,11 @@ const CabinetChange = () => {
     }
 
     const handleSignUp = () => {
-        dispatch(patchUser({ userId, name, surname, phone, login, password }))
-        localStorage.setItem('name', name)
-        localStorage.setItem('surname', surname)
-        localStorage.setItem('phone', phone)
-        localStorage.setItem('login', login)
+        dispatch(changeProfileRequest({userId, data: name, surname, phone, login, password}))
+        // localStorage.setItem('name', name)
+        // localStorage.setItem('surname', surname)
+        // localStorage.setItem('phone', phone)
+        // localStorage.setItem('login', login)
     }
 
     const handleSubmit = (e) => {

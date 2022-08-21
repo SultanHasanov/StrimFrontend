@@ -89,10 +89,10 @@ const SignUp = () => {
 
     const handleSignUp = () => {
         dispatch(postUser({name, surname, phone, login, password}))
-        localStorage.setItem('name', name)
-        localStorage.setItem('surname', surname)
-        localStorage.setItem('phone', phone)
-        localStorage.setItem('login', login)
+        // localStorage.setItem('name', name)
+        // localStorage.setItem('surname', surname)
+        // localStorage.setItem('phone', phone)
+        // localStorage.setItem('login', login)
     }
 
     const handleSubmit = (e) => {
