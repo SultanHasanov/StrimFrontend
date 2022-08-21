@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { getProducts } from "../../components/features/productsSlice";
 import AllProducts from "./Categories/AllProducts";
 import { getCart } from "../../components/features/cartSlice";
+import { getFavorite } from './../../components/features/favoriteSlice';
 
 const MainProducts = () => {
   const product = useSelector((state) => state.products.products);
@@ -22,6 +23,10 @@ const MainProducts = () => {
 
   useEffect(() => {
     dispatch(getCart());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getFavorite());
   }, [dispatch]);
 
   const liveSearch = product.filter((item) => {

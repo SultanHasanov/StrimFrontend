@@ -13,6 +13,7 @@ import CartPage from "./pages/Cart/CartPage";
 import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 import CabinetPage from './pages/Cabinet/CabinetPage';
 import CabinetChange from './pages/Cabinet/CabinetChange';
+import BuyPage from './pages/Buy/BuyPage';
 
 
 
@@ -38,21 +39,21 @@ function App() {
   }
   return (
     <div className="App">
-      <Header />
-      <HeaderMain />
-      <Routes>
-        <Route path="/" element={<MainContent />} />
-        <Route path="/register" element={<Navigate to="/" />} />
-        <Route path="/auth" element={<Navigate to="/" />} />
-        <Route path="/my-team" element={<MyTeam />} />
-        <Route path="/products" element={<MainProducts />} />
-        <Route path="/cart" element={<CartPage />}></Route>
-        <Route path="/all-tovars" element={<AllProducts />} />
-        <Route path="/cabinet" element={<CabinetPage />}></Route>
-        <Route path="/cabinetChange" element={<CabinetChange />}></Route>
-      </Routes>
-      <Footer />
-    </div>
+        <Header />
+        <HeaderMain />
+        <Routes>
+          <Route path="/" element={<MainContent />} />
+          <Route path="/register" element={<Navigate to="/" />} />
+          <Route path="/auth" element={<Navigate to="/" />} />
+          <Route path="/my-team" element={<MyTeam />} />
+          <Route path="/products" element={<MainProducts />} />
+          <Route path="/cart" element={<CartPage />}></Route>
+          <Route path="/all-tovars" element={<AllProducts />} />
+          <Route path="/cabinet" element={<CabinetPage />}></Route>
+          <Route path="/cabinetchange" element={<CabinetChange />}></Route>
+          <Route path="/buy" element={<BuyPage />}></Route>
+        </Routes>
+        <Footer />
   );
 }
 
