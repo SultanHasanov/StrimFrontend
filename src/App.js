@@ -54,7 +54,6 @@ function App() {
           <Route path="/buy" element={<BuyPage />}></Route>
         </Routes>
         <Footer />
-      </div>
   );
 }
 

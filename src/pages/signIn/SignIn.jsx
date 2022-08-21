@@ -49,6 +49,7 @@ const SignIn = () => {
     const handleSignIn = () => {
         dispatch(postLogin({login, password}))
         console.log('Отправка логина и парол')
+        localStorage.setItem('login', login)
     }
 
 
