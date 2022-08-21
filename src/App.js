@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 import MyTeam from "./pages/my-team/MyTeam";
 import MainProducts from "./pages/MainProducts/MainProducts";
 import CartPage from "./pages/Cart/CartPage";
-import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 import CabinetPage from "./pages/Cabinet/CabinetPage";
 import CabinetChange from "./pages/Cabinet/CabinetChange";
 import BuyPage from "./pages/Buy/BuyPage";
@@ -37,7 +36,6 @@ function App() {
           <Route path="/my-team" element={<MyTeam />} />
           <Route path="/products" element={<MainProducts />} />
           <Route path="/cart" element={<Navigate to="/register" />}></Route>
-          <Route path="/all-tovars" element={<AllProducts />} />
           <Route path="/cabinet" element={<Navigate to="/register" />}></Route>
           <Route path="/cabinetchange" element={<Navigate to="/register" />}></Route>
           <Route path="/buy" element={<Navigate to="/register" />}></Route>
@@ -58,7 +56,6 @@ function App() {
         <Route path="/my-team" element={<MyTeam />} />
         <Route path="/products" element={<MainProducts />} />
         <Route path="/cart" element={<CartPage />}></Route>
-        <Route path="/all-tovars" element={<AllProducts />} />
         <Route path="/cabinet" element={<CabinetPage />}></Route>
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         <Route path="/buy" element={<BuyPage />}></Route>
