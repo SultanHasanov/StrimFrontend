@@ -13,6 +13,7 @@ import CartPage from "./pages/Cart/CartPage";
 import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 import CabinetPage from './pages/Cabinet/CabinetPage';
 import CabinetChange from './pages/Cabinet/CabinetChange';
+import BuyPage from './pages/Buy/BuyPage';
 
 
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/all-tovars" element={<AllProducts />} />
           <Route path="/cabinet" element={<CabinetPage />}></Route>
           <Route path="/cabinetchange" element={<CabinetChange />}></Route>
+          <Route path="/buy" element={<BuyPage />}></Route>
         </Routes>
         <Footer />
       </div>

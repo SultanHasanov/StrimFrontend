@@ -4,7 +4,7 @@ export const menuItems = [
       submenu: [
         {
           title: "ВСЕ ТОВАРЫ",
-          path: "all-tovars"
+          path: "products"
         },
         {
           title: "КОСТЮМЫ",
