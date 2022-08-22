@@ -1,0 +1,13 @@
+*{
+    
+
+}
+
+.kontact {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

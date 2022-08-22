@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
       <div className={styles.links}>
         <span>КОНТАКТЫ</span>
-        <Link to="#">Обратная связь</Link>
+        <Link to="/kontact">Обратная связь</Link>
         <Link to="#">О нас</Link>
       </div>
       <div className={styles.contact_us}>

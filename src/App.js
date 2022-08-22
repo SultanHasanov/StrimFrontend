@@ -15,6 +15,7 @@ import CabinetChange from "./pages/Cabinet/CabinetChange";
 import BuyPage from "./pages/Buy/BuyPage";
 import FavoritePage from './pages/Favorite/FavoritePage';
 import News from "./pages/News/News";
+import Kontact from "./pages/Kontact/Kontact";
 
 function App() {
   const token = useSelector((state) => state.user.token);
@@ -62,6 +63,7 @@ function App() {
         <Route path="/buy" element={<BuyPage />}></Route>
         <Route path="/favorite" element={<FavoritePage />}></Route>
         <Route path="/news" element={<News/>} />
+        <Route path="/kontact" element={<Kontact/>}/>
       </Routes>
       <Footer />
     </div>
