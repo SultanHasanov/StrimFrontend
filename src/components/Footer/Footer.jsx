@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.magazine}>
         <span>КОМПАНИЯ</span>
         <Link to="/my-team">О нас</Link>
-        <Link to="#">Новости</Link>
+        <Link to="/news">Новости</Link>
         <Link to="#">Работники</Link>
         <a href="https://t.me/MISTERShop95" target="_blank" rel="noopener noreferrer">
           Сотрудничество
